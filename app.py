@@ -79,12 +79,6 @@ def results():
     all['age_max'] = ageresults[2] # самый старший респондент.
     all['total_count'] = User.query.count() # всего прошло опрос столько...
 
-    all['q1_mean'] = db.session.query(func.avg(Answers.q1)).one()[0]
-    all['q2_mean'] = db.session.query(func.avg(Answers.q2)).one()[0]
-    all['q3_mean'] = db.session.query(func.avg(Answers.q3)).one()[0]
-    all['q4_mean'] = db.session.query(func.avg(Answers.q4)).one()[0]
-    all['q5_mean'] = db.session.query(func.avg(Answers.q5)).one()[0]
-
     return render_template('results.html', all = all)
 
 if __name__ == "__main__":
