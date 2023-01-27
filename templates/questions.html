@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/static/css/bootstrap.css">
+{% extends 'base.html' %}
+
+{% block title %} Опрос {% endblock %}
+
+{% block content %}
+<br>
+<form class="container" action="/process">
+    <div class="row">
     <title>Вопросы.</title>
     <h2><font face = "Fantasy">Survey.</font></h2>
 </head>
@@ -48,3 +50,4 @@
 </form>
 </body>
 </html>
+{% endblock %}
