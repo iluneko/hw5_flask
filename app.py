@@ -15,11 +15,11 @@ class User(db.Model): # пол и возраст пользователя (ст�
 class Answers(db.Model): # таблица с ответами пользователя на вопросы.
     __tablename__ = 'answers'
     id = db.Column(db.Integer, primary_key = True)
-    q1 = db.Column(db.Integer)
-    q2 = db.Column(db.Integer)
-    q3 = db.Column(db.Integer)
-    q4 = db.Column(db.Integer)
-    q5 = db.Column(db.Integer)
+    q1 = db.Column(db.Text)
+    q2 = db.Column(db.Text)
+    q3 = db.Column(db.Text)
+    q4 = db.Column(db.Text)
+    q5 = db.Column(db.Text)
 
 db.init_app(app) # коллабим.
 
