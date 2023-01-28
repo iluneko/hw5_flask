@@ -73,14 +73,6 @@ def answer_process():
 @app.route('/results') # какие результаты + статистика по ответам.
 def results():
     all = {}
-    ageresults = db.session.query(
-        func.avg(User.age),
-        func.min(User.age),
-        func.max(User.age)
-    ).one()
-    all['age_mean'] = ageresults[0] # средний возраст респондентов.
-    all['age_min'] = ageresults[1] # самый младший респондент.
-    all['age_max'] = ageresults[2] # самый старший респондент.
     all['total_count'] = User.query.count() # всего прошло опрос столько...
     all['q1_mean'] = db.session.query(func.avg(Answers.q1)).one()[0] # в среднем так оценили кошек / собак / змей и пр. пользователи...
     all['q2_mean'] = db.session.query(func.avg(Answers.q2)).one()[0]
