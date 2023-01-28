@@ -29,6 +29,11 @@ db.init_app(app) # коллабим.
 def db_creation():
     db.create_all()
 
+@app.route('/') 
+@app.route('/main') 
+def index():
+    return render_template("base.html")
+
 @app.route('/questions') # вопросы с помощью функции, на этой странице опрос.
 def questions():
     return render_template(
