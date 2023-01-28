@@ -4,70 +4,131 @@
 
 {% block content %}
 <br>
-<br>
-<br>
 <form class="container" action="/process">
+    <p><h1>Анкета респондента</h1></p>
     <div class="row">
-    <title>Вопросы.</title>
-    <h2><font face = "Fantasy">Survey.</font></h2>
-<br>
-<br>
-</head>
-<body>
-<form>
-    <br>
-    <br>
-    <h4><font face = "Helvetica"><b>Question 1.</b></font></h4>
-    <label><font face = "Fantasy">Имя: <input type="text" name="name"></font> </label>
-    <br>
-    <br>
-    
-    <h4><font face = "Helvetica"><b>Question 2.</b></font></h4>
-    <label><font face = "Fantasy">Возраст: <input type="text" name="age"></font> </label>
-    <br>
-    <br>
-    
-    <h4><font face = "Helvetica"><b>Question 3.</b></font></h4>
-    <label><font face = "Fantasy">Ваш пол.</font><br>
-    <label><input class="form-check-input" type="checkbox" name="female"><font face = "Fantasy">Ж.</font></label><br>
-    <label><input class="form-check-input" type="checkbox" name="male"><font face = "Fantasy">М.</font></label><br>
-    <br>
-    <br>
-    
-    <h4><font face = "Helvetica"><b>Question 4.</b></font></h4>
-    <label><font face = "Fantasy">Я студент:</font> <input type="checkbox" name="student"></label><br>
-    <br>
-    <br>   
+        <div class="col-md-4">Возраст</div>
+        <input type="number" name="age">
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">Гендер</div>
+        <select name="gender" class="col-md-4">
+            <option value="male">мужской</option>
+            <option value="female">женский</option>
+        </select>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">Уровень образования</div>
+        <select name="education" class="col-md-4">
+            <option value="school_9">9 классов школы</option>
+            <option value="school_11">11 классов школы</option>
+            <option value="college">среднее специальное</option>
+            <option value="student">неоконченное высшее</option>
+            <option value="bachelor">бакалавриат/специалитет</option>
+            <option value="master">магистратура</option>
+            <option value="phd">аспирантура</option>
+        </select>
+    </div>
+    <hr>
+    <h2>Вопросы</h2>
 
-    <h4><font face = "Helvetica"><b>Question 5.</b></font></h4>
-    <label><font face = "Fantasy">Какое животное Вам больше нравится на основе <b>внешних данных</b>?</font><br>
-    <label><input class="form-check-input" type="checkbox" name="dog"><font face = "Fantasy">собака.</font></label><br>
-    <label><input class="form-check-input" type="checkbox" name="cat"><font face = "Fantasy">кошка.</font></label><br>
-    <br>
-    <br>
+    <div style="margin: 50px 10%">
+        <p><h3 style="text-align: left;">1. Эмен рокъове вачӀана</h3></p>
+        <input class="radio" type="radio" name="q1" value=5> 5 (отлично)<br>
+        <input class="radio" type="radio" name="q1" value=4> 4 (хорошо)<br>
+        <input class="radio" type="radio" name="q1" value=3> 3 (нормально)<br>
+        <input class="radio" type="radio" name="q1" value=2> 2 (плохо)<br>
+        <input class="radio" type="radio" name="q1" value=1> 1 (ужасно)<br>
+    </div>
+    <hr>
+    <div style="margin: 50px 10%">
+        <p><h3 style="text-align: left;">2. ГьитIинай кьижун вуго</h3></p>
+        <input class="radio" type="radio" name="q2" value=5> 5 (отлично)<br>
+        <input class="radio" type="radio" name="q2" value=4> 4 (хорошо)<br>
+        <input class="radio" type="radio" name="q2" value=3> 3 (нормально)<br>
+        <input class="radio" type="radio" name="q2" value=2> 2 (плохо)<br>
+        <input class="radio" type="radio" name="q2" value=1> 1 (ужасно)<br>
+    </div>
+    <hr>
+    <div style="margin: 50px 10%">
+        <p><h3 style="text-align: left;">3. Эмен хур бекьана</h3></p>
+        <input class="radio" type="radio" name="q3" value=5> 5 (отлично)<br>
+        <input class="radio" type="radio" name="q3" value=4> 4 (хорошо)<br>
+        <input class="radio" type="radio" name="q3" value=3> 3 (нормально)<br>
+        <input class="radio" type="radio" name="q3" value=2> 2 (плохо)<br>
+        <input class="radio" type="radio" name="q3" value=1> 1 (ужасно)<br>
+    </div>
+    <hr>
+    <div style="margin: 50px 10%">
+        <p><h3 style="text-align: left;">4. Инсуца вас вихьана</h3></p>
+        <input class="radio" type="radio" name="q4" value=5> 5 (отлично)<br>
+        <input class="radio" type="radio" name="q4" value=4> 4 (хорошо)<br>
+        <input class="radio" type="radio" name="q4" value=3> 3 (нормально)<br>
+        <input class="radio" type="radio" name="q4" value=2> 2 (плохо)<br>
+        <input class="radio" type="radio" name="q4" value=1> 1 (ужасно)<br>
+    </div>
+    <hr>
+    <div style="margin: 50px 10%">
+        <p><h3 style="text-align: left;">5. Эбелалъе яс йокьула</h3></p>
+        <input class="radio" type="radio" name="q5" value=5> 5 (отлично)<br>
+        <input class="radio" type="radio" name="q5" value=4> 4 (хорошо)<br>
+        <input class="radio" type="radio" name="q5" value=3> 3 (нормально)<br>
+        <input class="radio" type="radio" name="q5" value=2> 2 (плохо)<br>
+        <input class="radio" type="radio" name="q5" value=1> 1 (ужасно)<br>
+    </div>
+    <hr>
+    <div style="margin: 50px 10%">
+        <p><h3 style="text-align: left;">6. ГьитIинай цӀалдолей йиго</h3></p>
+        <input class="radio" type="radio" name="q6" value=5> 5 (отлично)<br>
+        <input class="radio" type="radio" name="q6" value=4> 4 (хорошо)<br>
+        <input class="radio" type="radio" name="q6" value=3> 3 (нормально)<br>
+        <input class="radio" type="radio" name="q6" value=2> 2 (плохо)<br>
+        <input class="radio" type="radio" name="q6" value=1> 1 (ужасно)<br>
+    </div>
+    <hr>
+    <div style="margin: 50px 10%">
+        <p><h3 style="text-align: left;">7. Директорас кидаго тӀахьал цӀалулев вукӀуна</h3></p>
+        <input class="radio" type="radio" name="q7" value=5> 5 (отлично)<br>
+        <input class="radio" type="radio" name="q7" value=4> 4 (хорошо)<br>
+        <input class="radio" type="radio" name="q7" value=3> 3 (нормально)<br>
+        <input class="radio" type="radio" name="q7" value=2> 2 (плохо)<br>
+        <input class="radio" type="radio" name="q7" value=1> 1 (ужасно)<br>
+    </div>
+    <hr>
+    <div style="margin: 50px 10%">
+        <p><h3 style="text-align: left;">8. Вас вачӀана</h3></p>
+        <input class="radio" type="radio" name="q8" value=5> 5 (отлично)<br>
+        <input class="radio" type="radio" name="q8" value=4> 4 (хорошо)<br>
+        <input class="radio" type="radio" name="q8" value=3> 3 (нормально)<br>
+        <input class="radio" type="radio" name="q8" value=2> 2 (плохо)<br>
+        <input class="radio" type="radio" name="q8" value=1> 1 (ужасно)<br>
+    </div>
+    <hr>
+    <div style="margin: 50px 10%">
+        <p><h3 style="text-align: left;">9. Директорас гIарзаялда гъулбас гьабуна</h3></p>
+        <input class="radio" type="radio" name="q9" value=5> 5 (отлично)<br>
+        <input class="radio" type="radio" name="q9" value=4> 4 (хорошо)<br>
+        <input class="radio" type="radio" name="q9" value=3> 3 (нормально)<br>
+        <input class="radio" type="radio" name="q9" value=2> 2 (плохо)<br>
+        <input class="radio" type="radio" name="q9" value=1> 1 (ужасно)<br>
+    </div>
+    <hr>
+    <div style="margin: 50px 10%">
+        <p><h3 style="text-align: left;">10. Унел руго дол</h3></p>
+        <input class="radio" type="radio" name="q10" value=5> 5 (отлично)<br>
+        <input class="radio" type="radio" name="q10" value=4> 4 (хорошо)<br>
+        <input class="radio" type="radio" name="q10" value=3> 3 (нормально)<br>
+        <input class="radio" type="radio" name="q10" value=2> 2 (плохо)<br>
+        <input class="radio" type="radio" name="q10" value=1> 1 (ужасно)<br>
+    </div>
 
-    <h4><font face = "Helvetica"><b>Question 6.</b></font></h4>
-    <label><font face = "Fantasy">Какое животное Вам больше нравится на основе <b>характера</b>?</font><br>
-    <label><input class="form-check-input" type="checkbox" name="dog"><font face = "Fantasy">собака.</font></label><br>
-    <label><input class="form-check-input" type="checkbox" name="male"><font face = "Fantasy">кошка.</font></label><br>
-    <br>
-    <br>
-    
-    <h4><font face = "Helvetica"><b>Question 7.</b></font></h4>
-    <label><font face = "Fantasy">Какое животное Вы бы приобрели, если бы покупка была назначена на <b>завтра</b>?</font><br>
-    <label><input class="form-check-input" type="checkbox" name="female"><font face = "Fantasy">собака.</font></label><br>
-    <label><input class="form-check-input" type="checkbox" name="male"><font face = "Fantasy">кошка.</font></label><br>
-    <br>
-    <br>
-        
-    <h4><font face = "Helvetica"><b>Question 8.</b></font></h4>
-    <label><font face = "Fantasy">Какое животное Вы бы приобрели, если бы если бы у Вас был <b>частный дом</b>?</font><br>
-    <label><input class="form-check-input" type="checkbox" name="female"><font face = "Fantasy">собака.</font></label><br>
-    <label><input class="form-check-input" type="checkbox" name="male"><font face = "Fantasy">кошка.</font></label><br> 
-    <label><input type="submit" value="Отправить"></label>
-    <br>
-    <br>
+    <div class="row">
+        <input class="submit" type="submit" name="submit" value="Отправить">
+    </div>
 </form>
-</body>
-</html>
+<br>
+<br>
+<br>
 {% endblock %}
