@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dogcat.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///animals.db'
 db = SQLAlchemy()
 
 class User(db.Model): # пол и возраст пользователя (+ студент / не студент).
@@ -56,7 +56,7 @@ def answer_process():
     )
     db.session.add(user)
     db.session.commit()
-    db.session.refresh(user) # подгрузка информации о пользователе в бд
+    db.session.refresh(user)
     
     q1 = request.args.get('q1')
     q2 = request.args.get('q2')
