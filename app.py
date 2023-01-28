@@ -29,8 +29,7 @@ db.init_app(app) # коллабим.
 def db_creation():
     db.create_all()
 
-@app.route('/') 
-@app.route('/main') 
+@app.route('/')  
 def index():
     return render_template("base.html")
 
