@@ -30,9 +30,9 @@ def db_creation():
     db.create_all()
 
 @app.route('/') 
-@app.route('/main') # возврат на главную страницу...
+@app.route('/glavnaya') # возврат на главную страницу...
 def index():
-    return render_template("base.html")
+    return render_template("main.html")
 
 @app.route('/questions') # вопросы с помощью функции, на этой странице опрос.
 def questions():
