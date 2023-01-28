@@ -84,4 +84,5 @@ def results():
     return render_template('results.html', all = all)
 
 if __name__ == "__main__":
+    app.debug = True # чтобы не было багов / устранены недочёты...
     app.run()
